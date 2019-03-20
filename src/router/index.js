@@ -30,7 +30,7 @@ const router = new Router({
     Countdown,
     Result,
     Dashboard,
-    Picker,
+    Picker
   ]
 })
 
