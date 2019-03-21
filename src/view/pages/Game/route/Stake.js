@@ -5,6 +5,6 @@ export default {
   name: 'Stake',
   component: Stake,
   meta: {
-    main_menu: false
+    main_menu: true
   }
 }

@@ -1,10 +1,17 @@
 <template>
-  <div>countdown</div>
+  <div>countdown
+    <timer></timer>
+  </div>
 </template>
 
 <script>
+  import Timer from './Timer'
+
   export default {
-    name: 'Countdown'
+    name: 'Countdown',
+    components: {
+      'timer': Timer
+    }
   }
 </script>
 

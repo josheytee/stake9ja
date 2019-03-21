@@ -1,5 +1,3 @@
-<i18n src="./i18n/index.json"></i18n>
-
 <template>
   <div>
     <form action="" class="Form">

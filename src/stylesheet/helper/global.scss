@@ -10,7 +10,7 @@
 
 .App {
   background-size: cover;
-  background: url("/static/images/wallpaper.png") no-repeat fixed;
+  background: url(/static/images/wallpaper.png) no-repeat fixed;
 }
 
 .grid {
@@ -47,14 +47,10 @@
 
 .stake {
   display: flex;
-  //flex: 45%;
-  //max-width: 100%;
   flex-direction: column;
-  /*width: 45%;*/
   margin: 5px;
   background-size: contain;
   background: url(/static/images/Game-background.png) no-repeat center;
-  /*height: 350px;*/
   &-logo {
     padding-top: 15px;
     margin: 0 auto;

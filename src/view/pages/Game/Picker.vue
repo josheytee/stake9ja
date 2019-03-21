@@ -1,13 +1,13 @@
 <template>
-  <div style="margin: 0 auto; width: 500px">
+  <div class="container">
     <div class="grid grid-picker" id="picker">
-      <div :class="compClasses" :id="'ball_'+ball" v-for="ball in balls" @click="pickBall(ball)">
-        <img :src="'static/asset/'+ball+'.png'" :alt="ball">
+      <div :class="'pick-'+ball" :id="'ball_'+ball" v-for="ball in balls" @click="pickBall(ball)">
+        <!--<img :src="'static/asset/'+ball+'.png'" :alt="ball">-->
       </div>
     </div>
     <div id="picked" class="grid grid-8">
-      <div class="pick" v-for="ball in picked_balls">
-        <img :src="'static/asset/'+ball+'.png'" :alt="ball">
+      <div :class="'pick'+ball" v-for="ball in picked_balls">
+        <!--<img :src="'static/asset/'+ball+'.png'" :alt="ball">-->
       </div>
     </div>
 
@@ -56,26 +56,20 @@
         let clickedBall = document.getElementById('ball_' + number)
         if (this.picked_balls.length <= 8) {
           if (!this.picked_balls.includes(number)) {
-            clickedBall.classList.add('picked')
+            clickedBall.classList.add('picked-' + number)
             this.picked_balls.push(number)
           } else if (this.picked_balls.includes(number)) {
             let index = this.picked_balls.indexOf(number)
             if (index > -1) {
               this.picked_balls.splice(index, 1)
             }
-            clickedBall.classList.remove('picked')
+            clickedBall.classList.remove('picked' + number)
             // this.picked_balls.splice(number)
           }
         } else {
           this.picked_balls.length = 8
         }
-        // console.log(this.picked_balls)
-      },
-      unPickBall: function (number) {
-        // _.remove(this.picked_balls, (n) => number === n)
-      },
-      selectBall: function (number) {
-
+        console.log(this.picked_balls)
       }
     },
     computed: {
@@ -106,18 +100,23 @@
     border: $color-primary 1px solid;
   }
 
-  .picked {
-    opacity: .2
-  }
-
-  .pick {
-    cursor: pointer;
-    img {
-      width: 20px;
-      height: 20px;
+  @for $i from 1 through 36 {
+    .pick-#{$i} {
+      cursor: pointer;
+      background: url("/static/asset/#{$i}.png") no-repeat center;
+      background-size: contain;
+      /*img {*/
+      width: 50px;
+      height: 50px;
+      /*}*/
+      &:hover {
+        opacity: .8;
+      }
     }
-    &:hover {
-      opacity: .8;
+    .picked-#{$i} {
+      cursor: pointer;
+      background: url("/static/asset/green/#{$i}.png") no-repeat center;
+      background-size: contain;
     }
   }
 </style>

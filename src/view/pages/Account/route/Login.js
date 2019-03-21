@@ -5,6 +5,6 @@ export default {
   name: 'Login',
   component: Login,
   meta: {
-    main_menu: true
+    main_menu: false
   }
 }

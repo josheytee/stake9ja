@@ -1,9 +1,9 @@
 <template>
-  <div class="panel">
+  <div class="container">
     <span id="timer">Play now Game closes in... </span>
 
     <div class="row">
-      <div class="col col-md-6 stake">
+      <div class="col col-md-5 stake">
         <div class="stake-logo">
           <img src="/static/images/logo.png" alt="">
         </div>
@@ -16,7 +16,7 @@
           <a href="#" class="btn btn-stake">SHARE</a>
         </div>
       </div>
-      <div class="col col-md-6 stake">
+      <div class="col col-md-5 stake">
         <div class="stake-logo">
           <img src="/static/images/logo.png" alt="">
         </div>
@@ -29,7 +29,7 @@
           <a href="#" class="btn btn-stake">SHARE</a>
         </div>
       </div>
-      <div class="col col-md-6 stake">
+      <div class="col col-md-5 stake">
         <div class="stake-logo">
           <img src="/static/images/logo.png" alt="">
         </div>
@@ -42,7 +42,7 @@
           <a href="#" class="btn btn-stake">SHARE</a>
         </div>
       </div>
-      <div class="col col-md-6 stake">
+      <div class="col col-md-5 stake">
         <div class="stake-logo">
           <img src="/static/images/logo.png" alt="">
         </div>
@@ -52,6 +52,32 @@
         <div class="stake-buttons grid grid-3">
           <a href="#" class="btn btn-stake">PLAY NOW</a>
           <a href="#" class="btn btn-stake">STAKE WITH N2000</a>
+          <a href="#" class="btn btn-stake">SHARE</a>
+        </div>
+      </div>
+      <div class="col col-md-5 stake">
+        <div class="stake-logo">
+          <img src="/static/images/logo.png" alt="">
+        </div>
+        <div class="stake-point">
+          <img src="/static/images/450000.png" alt="">
+        </div>
+        <div class="stake-buttons grid grid-3">
+          <a href="#" class="btn btn-stake">PLAY NOW</a>
+          <a href="#" class="btn btn-stake">STAKE WITH N3000</a>
+          <a href="#" class="btn btn-stake">SHARE</a>
+        </div>
+      </div>
+      <div class="col col-md-5 stake">
+        <div class="stake-logo">
+          <img src="/static/images/logo.png" alt="">
+        </div>
+        <div class="stake-point">
+          <img src="/static/images/900000..png" alt="">
+        </div>
+        <div class="stake-buttons grid grid-3">
+          <a href="#" class="btn btn-stake">PLAY NOW</a>
+          <a href="#" class="btn btn-stake">STAKE WITH N5000</a>
           <a href="#" class="btn btn-stake">SHARE</a>
         </div>
       </div>

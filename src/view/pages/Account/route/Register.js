@@ -5,6 +5,6 @@ export default {
   name: 'Register',
   component: Register,
   meta: {
-    main_menu: true
+    main_menu: false
   }
 }

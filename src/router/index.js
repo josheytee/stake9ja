@@ -7,6 +7,7 @@ import Contact from '@/view/pages/Contact/route'
 import Register from '@/view/pages/Account/route/Register'
 import Login from '@/view/pages/Account/route/Login'
 import Terms from '@/view/pages/Others/route/Terms'
+import HowTo from '@/view/pages/Others/route/HowTo'
 import Responsible from '@/view/pages/Others/route/Responsible'
 import Privacy from '@/view/pages/Others/route/Privacy'
 import Stake from '@/view/pages/Game/route/Stake'
@@ -30,7 +31,8 @@ const router = new Router({
     Countdown,
     Result,
     Dashboard,
-    Picker
+    Picker,
+    HowTo
   ]
 })
 
