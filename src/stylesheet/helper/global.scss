@@ -16,7 +16,7 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  grid-gap: .5rem 1rem;
+  grid-gap: .5rem .4rem;
   padding: 10px;
   &-picker {
     grid-gap: 30px;

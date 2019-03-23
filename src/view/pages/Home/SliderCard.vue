@@ -26,7 +26,7 @@
       width: 250px;
     }
     .stake-buttons {
-      width: 280px;
+      width: 255px;
     }
   }
 </style>

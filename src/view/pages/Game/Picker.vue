@@ -90,7 +90,7 @@
     border-radius: 5px;
     max-width: $picker-width;
     margin-top: 10px;
-    height: 60px;
+    height: 80px;
     img {
       height: 60px;
       width: 60px;
