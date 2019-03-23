@@ -17,86 +17,94 @@
           </div>
         </div>
       </div>
-      <div class="row slide-images">
-        <div class="col stake">
-          <div class="stake-logo">
-            <img src="/static/images/logo.png" alt="">
-          </div>
-          <div class="stake-point">
-            <img src="/static/images/18000.png" alt="">
-          </div>
-          <div class="stake-buttons grid grid-3">
-            <a href="#" class="btn btn-stake">PLAY NOW</a>
-            <a href="#" class="btn btn-stake">STAKE WITH N200</a>
-            <a href="#" class="btn btn-stake">SHARE</a>
-          </div>
-        </div>
-        <div class="col stake">
-          <div class="stake-logo">
-            <img src="/static/images/logo.png" alt="">
-          </div>
-          <div class="stake-point">
-            <img src="/static/images/45000.png" alt="">
-          </div>
-          <div class="stake-buttons grid grid-3">
-            <a href="#" class="btn btn-stake">PLAY NOW</a>
-            <a href="#" class="btn btn-stake">STAKE WITH N500</a>
-            <a href="#" class="btn btn-stake">SHARE</a>
-          </div>
-        </div>
-        <div class="col stake">
-          <div class="stake-logo">
-            <img src="/static/images/logo.png" alt="">
-          </div>
-          <div class="stake-point">
-            <img src="/static/images/90000.png" alt="">
-          </div>
-          <div class="stake-buttons grid grid-3">
-            <a href="#" class="btn btn-stake">PLAY NOW</a>
-            <a href="#" class="btn btn-stake">STAKE WITH N1000</a>
-            <a href="#" class="btn btn-stake">SHARE</a>
-          </div>
-        </div>
-        <div class="col stake">
-          <div class="stake-logo">
-            <img src="/static/images/logo.png" alt="">
-          </div>
-          <div class="stake-point">
-            <img src="/static/images/180000.png" alt="">
-          </div>
-          <div class="stake-buttons grid grid-3">
-            <a href="#" class="btn btn-stake">PLAY NOW</a>
-            <a href="#" class="btn btn-stake">STAKE WITH N2000</a>
-            <a href="#" class="btn btn-stake">SHARE</a>
-          </div>
-        </div>
-        <div class="col stake">
-          <div class="stake-logo">
-            <img src="/static/images/logo.png" alt="">
-          </div>
-          <div class="stake-point">
-            <img src="/static/images/450000.png" alt="">
-          </div>
-          <div class="stake-buttons grid grid-3">
-            <a href="#" class="btn btn-stake">PLAY NOW</a>
-            <a href="#" class="btn btn-stake">STAKE WITH N3000</a>
-            <a href="#" class="btn btn-stake">SHARE</a>
-          </div>
-        </div>
-        <div class="col stake">
-          <div class="stake-logo">
-            <img src="/static/images/logo.png" alt="">
-          </div>
-          <div class="stake-point">
-            <img src="/static/images/900000..png" alt="">
-          </div>
-          <div class="stake-buttons grid grid-3">
-            <a href="#" class="btn btn-stake">PLAY NOW</a>
-            <a href="#" class="btn btn-stake">STAKE WITH N5000</a>
-            <a href="#" class="btn btn-stake">SHARE</a>
-          </div>
-        </div>
-      </div>
+      <slider></slider>
+      <!--<slick ref="slick" :options="slickOptions">-->
+        <!--<a href="http://placehold.it/250x300"><img src="http://placehold.it/250x300" alt=""></a>-->
+        <!--<a href="http://placehold.it/250x300"><img src="http://placehold.it/250x300" alt=""></a>-->
+        <!--<a href="http://placehold.it/250x300"><img src="http://placehold.it/250x300" alt=""></a>-->
+        <!--<a href="http://placehold.it/250x300"><img src="http://placehold.it/250x300" alt=""></a>-->
+        <!--<a href="http://placehold.it/250x300"><img src="http://placehold.it/250x300" alt=""></a>-->
+        <!--<a href="http://placehold.it/250x300"><img src="http://placehold.it/250x300" alt=""></a>-->
+
+      <!--</slick>-->
+      <!--<div class="stake">-->
+      <!--<div class="stake-logo">-->
+      <!--<img src="/static/images/logo.png" alt="">-->
+      <!--</div>-->
+      <!--<div class="stake-point">-->
+      <!--<img src="/static/images/18000.png" alt="">-->
+      <!--</div>-->
+      <!--<div class="stake-buttons grid grid-3">-->
+      <!--<a href="#" class="btn btn-stake">PLAY NOW</a>-->
+      <!--<a href="#" class="btn btn-stake">STAKE WITH N200</a>-->
+      <!--<a href="#" class="btn btn-stake">SHARE</a>-->
+      <!--</div>-->
+      <!--</div>-->
+      <!--<div class="stake">-->
+      <!--<div class="stake-logo">-->
+      <!--<img src="/static/images/logo.png" alt="">-->
+      <!--</div>-->
+      <!--<div class="stake-point">-->
+      <!--<img src="/static/images/45000.png" alt="">-->
+      <!--</div>-->
+      <!--<div class="stake-buttons grid grid-3">-->
+      <!--<a href="#" class="btn btn-stake">PLAY NOW</a>-->
+      <!--<a href="#" class="btn btn-stake">STAKE WITH N500</a>-->
+      <!--<a href="#" class="btn btn-stake">SHARE</a>-->
+      <!--</div>-->
+      <!--</div>-->
+      <!--<div class="stake">-->
+      <!--<div class="stake-logo">-->
+      <!--<img src="/static/images/logo.png" alt="">-->
+      <!--</div>-->
+      <!--<div class="stake-point">-->
+      <!--<img src="/static/images/90000.png" alt="">-->
+      <!--</div>-->
+      <!--<div class="stake-buttons grid grid-3">-->
+      <!--<a href="#" class="btn btn-stake">PLAY NOW</a>-->
+      <!--<a href="#" class="btn btn-stake">STAKE WITH N1000</a>-->
+      <!--<a href="#" class="btn btn-stake">SHARE</a>-->
+      <!--</div>-->
+      <!--</div>-->
+      <!--<div class="stake">-->
+      <!--<div class="stake-logo">-->
+      <!--<img src="/static/images/logo.png" alt="">-->
+      <!--</div>-->
+      <!--<div class="stake-point">-->
+      <!--<img src="/static/images/180000.png" alt="">-->
+      <!--</div>-->
+      <!--<div class="stake-buttons grid grid-3">-->
+      <!--<a href="#" class="btn btn-stake">PLAY NOW</a>-->
+      <!--<a href="#" class="btn btn-stake">STAKE WITH N2000</a>-->
+      <!--<a href="#" class="btn btn-stake">SHARE</a>-->
+      <!--</div>-->
+      <!--</div>-->
+      <!--<div class="stake">-->
+      <!--<div class="stake-logo">-->
+      <!--<img src="/static/images/logo.png" alt="">-->
+      <!--</div>-->
+      <!--<div class="stake-point">-->
+      <!--<img src="/static/images/450000.png" alt="">-->
+      <!--</div>-->
+      <!--<div class="stake-buttons grid grid-3">-->
+      <!--<a href="#" class="btn btn-stake">PLAY NOW</a>-->
+      <!--<a href="#" class="btn btn-stake">STAKE WITH N3000</a>-->
+      <!--<a href="#" class="btn btn-stake">SHARE</a>-->
+      <!--</div>-->
+      <!--</div>-->
+      <!--<div class="stake">-->
+      <!--<div class="stake-logo">-->
+      <!--<img src="/static/images/logo.png" alt="">-->
+      <!--</div>-->
+      <!--<div class="stake-point">-->
+      <!--<img src="/static/images/900000..png" alt="">-->
+      <!--</div>-->
+      <!--<div class="stake-buttons grid grid-3">-->
+      <!--<a href="#" class="btn btn-stake">PLAY NOW</a>-->
+      <!--<a href="#" class="btn btn-stake">STAKE WITH N5000</a>-->
+      <!--<a href="#" class="btn btn-stake">SHARE</a>-->
+      <!--</div>-->
+      <!--</div>-->
     </div>
     <div class="quick-information">
       <h3>
@@ -117,12 +125,18 @@
 </template>
 
 <script>
+  import Slider from './Slider'
+
   export default {
-    name: 'Home'
+    name: 'Home',
+    components: {
+      Slider
+    }
   }
 </script>
 
 <style lang="scss">
+  /*@import '~/slick-carousel/slick/slick.css'*/
   .Home {
     padding: 50px;
     color: $color-primary;
@@ -137,10 +151,11 @@
     text-align: center;
     padding: 60px 0px;
     color: white;
+    margin-top: 60px;
     background: #8d183f url("/static/images/WIN BIG.png") no-repeat center;
     margin-bottom: -20px;
     position: relative;
-    img{
+    img {
       position: absolute;
       width: 100px;
       bottom: 10px;

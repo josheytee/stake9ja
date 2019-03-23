@@ -1,12 +1,13 @@
 <template>
-  <div class="panel panel-info">
+  <div class="panel">
     <h1>How to play</h1>
 
     <div v-for="step in steps" v-bind:key="step" class="steps">
       <div>
         <h3>step {{step}}</h3>
         <p>{{description[step-1]}}</p>
-        <img :src="'/static/images/step%20'+step+'.png'" alt="">
+        <img :src="'/static/images/step%20'+step+'.png'" alt=""/>
+        <img src="/static/images/logo.png" alt="" style="width:80px;margin: 0 80% 0 0"/>
       </div>
     </div>
   </div>
@@ -26,7 +27,10 @@
 
 <style lang="scss" scoped>
   .steps {
-    margin: 0 auto;
+    margin: 5px auto;
+    width:50%;
+    /*height: 400px;*/
+    padding: 20px;
     h3 {
       color: white;
       ::after {

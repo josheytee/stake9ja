@@ -6,6 +6,7 @@ import store from '@/store'
 import VeeValidate, { Validator } from 'vee-validate'
 import tr from 'vee-validate/dist/locale/tr'
 import VueLoading from 'vuex-loading'
+import VueKonva from 'vue-konva'
 
 Validator.localize('tr', tr)
 
@@ -15,6 +16,7 @@ const config = {
 
 Vue.use(VueLoading)
 Vue.use(VeeValidate, config)
+Vue.use(VueKonva)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

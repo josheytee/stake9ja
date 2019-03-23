@@ -21,7 +21,7 @@ const c = canvas.getContext('2d')
 canvas.width = innerWidth
 canvas.height = innerHeight
 console.log(innerHeight, innerWidth)
-console.log(outerHeight,outerWidth)
+console.log(outerHeight, outerWidth)
 
 const mouse = {
   x: innerWidth / 2,

@@ -7,7 +7,7 @@
     </div>
     <div id="picked" class="grid grid-8">
       <div :class="'pick'+ball" v-for="ball in picked_balls">
-        <!--<img :src="'static/asset/'+ball+'.png'" :alt="ball">-->
+        <img :src="'static/asset/'+ball+'.png'" :alt="ball">
       </div>
     </div>
 
@@ -63,7 +63,7 @@
             if (index > -1) {
               this.picked_balls.splice(index, 1)
             }
-            clickedBall.classList.remove('picked' + number)
+            clickedBall.classList.remove('picked-' + number)
             // this.picked_balls.splice(number)
           }
         } else {
@@ -84,13 +84,17 @@
 </script>
 
 <style lang="scss" scoped>
-  $picker-width: 500px;
+  $picker-width: 75%;
   #picked {
     background-color: $color-primary;
     border-radius: 5px;
     max-width: $picker-width;
     margin-top: 10px;
-    height: 40px;
+    height: 60px;
+    img {
+      height: 60px;
+      width: 60px;
+    }
   }
 
   #picker {
