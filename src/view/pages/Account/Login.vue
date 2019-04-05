@@ -1,28 +1,40 @@
+<i18n src="./i18n/index.json"></i18n>
+
 <template>
-  <div>
-    <form action="" class="Form">
-      <div class="title">Login</div>
-      <div class="Form-wrap">
-        <div class="Form-item">
-          <input type="text" placeholder="username" v-model="username" class="txt"/>
-        </div>
-        <div class="Form-item"><input type="password" placeholder="password" v-model="password" class="txt"></div>
-        <div class="Form-item">
-          <label class="Form-check">
-            <input type="checkbox" id="check" v-model="check">
-            <span class="checkmark"></span>
-            Remember me
-          </label>
-        </div>
-        <button type="submit" class="btn btn-full btn-dark">
-          Sign In
-        </button>
-        <div class="grid">
-          <a href="#" class="btn btn-login">Create Account</a>
-          <a href="#" class="btn btn-login">Reset Password</a>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="mx-auto" style="width: 70%">
+          <form action="" class="form">
+            <div class="title">CREATE ACCOUNT</div>
+            <div class="Form-wrap">
+              <div class="form-group">
+                <div class="col-12">
+                  <input type="text" placeholder="Username" v-model="username" class="form-control form-control-lg">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-12">
+                  <input type="password" placeholder="Password" v-model="password" class="form-control form-control-lg">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-12">
+                  <label for="checkbox">
+                    <input type="checkbox" id="checkbox" v-model="check" class="form-control"/>
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-12">
+                  <input value="Login" type="submit" class="btn btn-full btn-dark"/>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
-    </form>
+    </div>
   </div>
 </template>
 

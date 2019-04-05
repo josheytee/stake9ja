@@ -28,7 +28,7 @@ const mouse = {
   y: innerHeight / 2
 }
 
-const colors = ['#2185C5', '#7ECEFD', '#FFF6E5', '#FF7F66']
+const colors = ['#2185C5', '#7ECEFD', '#FFF6E5', '#FF7F66','#5E5f44']
 
 let gravity = 1
 let friction = 0.99

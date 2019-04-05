@@ -2,10 +2,10 @@
   <div class="slider-item staker">
     <img src="/static/images/logo.png" class="stake-logo" alt="">
     <img :src="'/static/images/'+image+'.png'" class="stake-point" alt="">
-    <div class="stake-buttons grid grid-3">
-      <a href="#" class="btn btn-stake">PLAY NOW</a>
-      <a href="#" class="btn btn-stake">STAKE WITH N{{amount}}</a>
-      <a href="#" class="btn btn-stake">SHARE</a>
+    <div class="stake-buttons row">
+      <a href="#" class="col btn btn-stake">PLAY NOW</a>
+      <a href="#" class="col btn btn-stake">STAKE WITH N{{amount}}</a>
+      <a href="#" class="col btn btn-stake">SHARE</a>
     </div>
   </div>
 </template>
@@ -18,6 +18,8 @@
 <style lang="scss" scoped>
   .staker {
     background: url(/static/images/Game-background.png) no-repeat center;
+    width: 260px;
+    margin: 2px;
     .stake-logo {
       width: 125px;
       margin-left: 65px;
@@ -27,6 +29,7 @@
     }
     .stake-buttons {
       width: 255px;
+      margin-left: 3px
     }
   }
 </style>

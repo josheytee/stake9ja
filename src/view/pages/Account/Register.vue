@@ -1,22 +1,54 @@
 <i18n src="./i18n/index.json"></i18n>
 
 <template>
-  <div>
-    <form action="" class="Form">
-      <div class="title">Create Account</div>
-      <div class="Form-wrap">
-        <div class="Form-item"><input type="text" placeholder="Full Name" v-model="name" class="txt"></div>
-        <div class="Form-item"><input type="text" placeholder="Username" v-model="username" class="txt"></div>
-        <div class="Form-item"><input type="text" placeholder="E-mail" v-model="email" class="txt"></div>
-        <div class="Form-item"><input type="text" placeholder="Phone Number" v-model="phone" class="txt"></div>
-        <div class="Form-item"><input type="password" placeholder="Password" v-model="password" class="txt"></div>
-        <div class="Form-item"><input type="password" placeholder="Confirm Password" v-model="cpassword" class="txt">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="mx-auto" style="width: 70%">
+          <form action="" class="form">
+            <div class="title">CREATE ACCOUNT</div>
+            <div class="Form-wrap">
+              <div class="form-group">
+                <div class="col-12">
+                  <input type="text" placeholder="Full Name" v-model="name" class="form-control form-control-lg">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-12">
+                  <input type="text" placeholder="Username" v-model="username" class="form-control form-control-lg">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-12">
+                  <input type="text" placeholder="E-mail" v-model="email" class="form-control form-control-lg">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-12">
+                  <input type="text" placeholder="Phone Number" v-model="phone" class="form-control form-control-lg">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-12">
+                  <input type="password" placeholder="Password" v-model="password" class="form-control form-control-lg">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-12">
+                  <input type="password" placeholder="Confirm Password" v-model="cpassword"
+                         class="form-control form-control-lg">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-12">
+                <input value="Register" type="submit" class="btn btn-full btn-dark"/>
+              </div>
+            </div>
+          </form>
         </div>
-        <button type="submit" class="btn btn-full btn-dark">
-          Register
-        </button>
       </div>
-    </form>
+    </div>
   </div>
 </template>
 

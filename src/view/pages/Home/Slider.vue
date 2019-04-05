@@ -30,7 +30,7 @@
       pushLeft: function (e) {
         let slider = this.$refs.slider_wrap
         let children = slider.children
-        console.log(children[0])
+        console.log(children[0].style)
         this.val -= 300 * 2
         console.log(this.$refs.slider_wrap.style.marginLeft = this.val + 'px')
         // console.log(this.$refs.slider_wrap.style.marginLeft += 10)
@@ -61,8 +61,9 @@
     &-item {
       float: left;
       margin: 10px;
+      padding-top: 12px;
       width: 250px;
-      height: 340px;
+      height: 300px;
       display: inline-block;
     }
     &-control {

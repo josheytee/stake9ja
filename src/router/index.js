@@ -15,6 +15,7 @@ import Countdown from '@/view/pages/Game/route/Countdown'
 import Dashboard from '@/view/pages/Game/route/Dashboard'
 import Result from '@/view/pages/Game/route/Result'
 import Picker from '@/view/pages/Game/route/Picker'
+import Anim from '@/view/pages/Game/route/Anim'
 
 Vue.use(Router)
 
@@ -32,7 +33,8 @@ const router = new Router({
     Result,
     Dashboard,
     Picker,
-    HowTo
+    HowTo,
+    Anim
   ]
 })
 

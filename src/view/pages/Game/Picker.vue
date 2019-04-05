@@ -1,34 +1,34 @@
 <template>
   <div class="container">
-    <div class="grid grid-picker" id="picker">
-      <div :class="'pick-'+ball" :id="'ball_'+ball" v-for="ball in balls" @click="pickBall(ball)">
-        <!--<img :src="'static/asset/'+ball+'.png'" :alt="ball">-->
-      </div>
-    </div>
-    <div id="picked" class="grid grid-8">
-      <div :class="'pick'+ball" v-for="ball in picked_balls">
-        <img :src="'static/asset/'+ball+'.png'" :alt="ball">
-      </div>
-    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="" id="picker">
+          <div :class="'ball pick-'+ball" :id="'ball_'+ball" v-for="ball in balls" @click="pickBall(ball)">
+            <!--<img :src="'static/asset/'+ball+'.png'" :alt="ball">-->
+          </div>
+        </div>
+        <div id="picked" class="grid grid-8">
+          <div :class="'pick'+ball" v-for="ball in picked_balls">
+            <img :src="'static/asset/'+ball+'.png'" :alt="ball">
+          </div>
+        </div>
 
-    <div style="margin: 10px auto;width: 500px">
-      <div class="btn btn-login">
-        <label for="stake">
-          stake
-          <select name="" id="stake">
-            <option>200</option>
-            <option>500</option>
-            <option>1000</option>
-            <option>2000</option>
-          </select>
-        </label>
+        <div class="col-6 btn btn-primary">
+          <label for="stake">
+            stake
+            <select name="" id="stake">
+              <option>200</option>
+              <option>500</option>
+              <option>1000</option>
+              <option>2000</option>
+            </select>
+          </label>
+        </div>
+        <div class="col-6 btn btn-primary">
+          POTENTIAL WINNINGS N1000
+        </div>
+        <button class="col-12 btn btn-secondary" style="">Play Now</button>
       </div>
-      <div class="btn btn-login">
-        POTENTIAL WINNINGS N1000
-      </div>
-    </div>
-    <div style="margin: 20px auto; width: 120px">
-      <button class="btn" style="">Play Now</button>
     </div>
   </div>
 </template>
@@ -53,22 +53,22 @@
     methods: {
       pickBall: function (number) {
         // console.log(number)
+        // if (this.picked_balls.filter() < 8) {
         let clickedBall = document.getElementById('ball_' + number)
-        if (this.picked_balls.length <= 8) {
-          if (!this.picked_balls.includes(number)) {
-            clickedBall.classList.add('picked-' + number)
-            this.picked_balls.push(number)
-          } else if (this.picked_balls.includes(number)) {
-            let index = this.picked_balls.indexOf(number)
-            if (index > -1) {
-              this.picked_balls.splice(index, 1)
-            }
-            clickedBall.classList.remove('picked-' + number)
-            // this.picked_balls.splice(number)
+        let pickedBall = this.picked_balls.find(ball => ball === number)
+        if (pickedBall != null) {
+          let index = this.picked_balls.indexOf(number)
+          if (index > -1) {
+            this.picked_balls.splice(index, 1)
           }
+          clickedBall.classList.remove('picked-' + number)
         } else {
-          this.picked_balls.length = 8
+          if (this.picked_balls.length < 8) {
+            this.picked_balls.push(number)
+            clickedBall.classList.add('picked-' + number)
+          }
         }
+        // }
         console.log(this.picked_balls)
       }
     },
@@ -84,24 +84,39 @@
 </script>
 
 <style lang="scss" scoped>
-  $picker-width: 75%;
+  $picker-width: 650px;
+  .ball {
+    float: left;
+    /* width: 100%; */
+    padding: 25px;
+    margin: 10px;
+  }
+
   #picked {
     background-color: $color-primary;
     border-radius: 5px;
     max-width: $picker-width;
     margin-top: 10px;
+    margin: 10px auto;
     height: 80px;
     img {
-      height: 60px;
-      width: 60px;
+      float: left;
+      /*height: 60px;*/
+      width: 40px;
+      margin: 0px 16px;
     }
   }
 
   #picker {
     background: $color-light;
     border-radius: 10px;
+    /*height: 300px;*/
     width: $picker-width;
     border: $color-primary 1px solid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px auto;
   }
 
   @for $i from 1 through 36 {

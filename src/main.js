@@ -3,7 +3,7 @@ import App from './App'
 import router from './router'
 import i18n from './i18n'
 import store from '@/store'
-import VeeValidate, { Validator } from 'vee-validate'
+import VeeValidate, {Validator} from 'vee-validate'
 import tr from 'vee-validate/dist/locale/tr'
 import VueLoading from 'vuex-loading'
 import VueKonva from 'vue-konva'
@@ -25,7 +25,7 @@ new Vue({
   router,
   i18n,
   store,
-  vueLoading: new VueLoading({ useVuex: true }),
+  vueLoading: new VueLoading({useVuex: true}),
   template: '<App/>',
-  components: { App }
+  components: {App}
 })

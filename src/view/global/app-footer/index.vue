@@ -1,54 +1,58 @@
 <template>
-  <div class="footer">
-    <div class="footer-top">
-      <a href="#/responsible-gaming">Responsible Gaming</a>
-      <a href="#/contact">Contact Us</a>
-      <a href="#/help">Help</a>
-      <a href="#/privacy">Privacy Policy</a>
-      <a href="#/terms">T&Cs</a>
-    </div>
-    <div class="payments">
-      <img src="/static/asset/padlock.png" alt="secure">
-      <img src="/static/asset/visa.png" alt="visa">
-      <img src="/static/asset/verve.png" alt="verve">
-      <img src="/static/asset/mastercard.png" alt="master card">
-      <img src="/static/asset/interswitch.jpg" alt="interswitch">
-    </div>
-    <div class="footer-bottom row">
-      <div class="footer-social col mt-lg-4">
-        <a href="#">
-          <img src="/static/asset/Facebook.png" alt="facebook">
-          <span>@stake9ja</span>
-        </a>
-        <a href="#">
-          <img src="/static/asset/Twitter.png" alt="twitter">
-          <span>@stake9ja</span>
-        </a>
-        <a href="#">
-          <img src="/static/asset/Instgram.png" alt="Instagram">
-          <span>@stake9ja</span>
-        </a>
-        <a href="#">
-          <img src="/static/asset/Whatsapp.png" alt="Instagram">
-          <span>+234</span>
-        </a>
+  <!--<b-col>-->
 
+    <div class="footer container-fluid">
+      <div class="footer-top">
+        <a href="#/responsible-gaming">Responsible Gaming</a>
+        <a href="#/contact">Contact Us</a>
+        <a href="#/help">Help</a>
+        <a href="#/privacy">Privacy Policy</a>
+        <a href="#/terms">T&Cs</a>
       </div>
-      <div class="footer-powered col mt-lg-5">
-        Powered by Truth ware Solutions
+      <div class="payments">
+        <img src="/static/asset/padlock.png" alt="secure">
+        <img src="/static/asset/visa.png" alt="visa">
+        <img src="/static/asset/verve.png" alt="verve">
+        <img src="/static/asset/mastercard.png" alt="master card">
+        <img src="/static/asset/interswitch.jpg" alt="interswitch">
       </div>
-      <div class="footer-others col">
-        <div id="wrap">
-          <div id="eig" class="mt-lg-3 mr-4">
-            <img src="/static/asset/+18.png" alt="18+">
-          </div>
-          <div id="logo">
-            <img src="/static/images/logo.png" alt="logo">
+      <div class="footer-bottom row">
+        <div class="footer-social col mt-lg-4">
+          <a href="#">
+            <img src="/static/asset/Facebook.png" alt="facebook">
+            <span>@stake9ja</span>
+          </a>
+          <a href="#">
+            <img src="/static/asset/Twitter.png" alt="twitter">
+            <span>@stake9ja</span>
+          </a>
+          <a href="#">
+            <img src="/static/asset/Instgram.png" alt="Instagram">
+            <span>@stake9ja</span>
+          </a>
+          <a href="#">
+            <img src="/static/asset/Whatsapp.png" alt="Instagram">
+            <span>+234</span>
+          </a>
+
+        </div>
+        <div class="footer-powered col mt-lg-5">
+          Powered by Truth ware Solutions
+        </div>
+
+        <div class="footer-others col">
+          <div id="wrap">
+            <div id="eig" class="mt-lg-4 mr-4">
+              <img src="/static/asset/+18.png" alt="18+">
+            </div>
+            <div id="logo">
+              <img src="/static/images/logo.png" alt="logo">
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  <!--</b-col>-->
 </template>
 
 <script>
@@ -129,11 +133,10 @@
     }
     &-others {
       /*position: relative;*/
-      float: right;
       #wrap {
         display: flex;
+        float: right;
         img {
-          float: right;
           width: 100%;
         }
         #eig {
