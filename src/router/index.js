@@ -8,6 +8,7 @@ import Register from '@/view/pages/Account/route/Register'
 import Login from '@/view/pages/Account/route/Login'
 import Terms from '@/view/pages/Others/route/Terms'
 import HowTo from '@/view/pages/Others/route/HowTo'
+import Card from '@/view/pages/Others/route/Card'
 import Responsible from '@/view/pages/Others/route/Responsible'
 import Privacy from '@/view/pages/Others/route/Privacy'
 import Stake from '@/view/pages/Game/route/Stake'
@@ -34,6 +35,7 @@ const router = new Router({
     Dashboard,
     Picker,
     HowTo,
+    Card,
     Anim
   ]
 })

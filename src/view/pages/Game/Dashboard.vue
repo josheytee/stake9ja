@@ -3,7 +3,7 @@
     <v-layer ref="layer">
       <v-image ref="wheel" :config="wheelConfig()"/>
       <!--<v-regular-polygon ref="wheel" :config="wheel" @mousedown="mousedown"></v-regular-polygon>-->
-      <v-group ref="group">
+      <v-group ref="group" :config="wheelConfig()">
         <!--<v-image :config="ballConfig(b)"  v-for="b in balls" v-bind:key="b"/>-->
         <v-image :config="ballConfig(1)" ref="b1"/>
         <v-image :config="ballConfig(2)" ref="b2"/>
@@ -78,7 +78,7 @@
       // let that = this
       let wheel = this.$refs.wheel.getStage()
       console.log(wheel.width(), wheel.height())
-      // let group = this.$refs.group.getStage()
+      let group = this.$refs.group.getStage()
       let ball1 = this.$refs.b1.getStage()
       let ball2 = this.$refs.b2.getStage()
       let ball3 = this.$refs.b3.getStage()
@@ -114,14 +114,14 @@
       // console.log(ball1)
 
       const anim = new Konva.Animation(function (frame) {
-        let pos = 3
+        let pos = 0.1
         wheel.rotate(pos)
-        // ball1.rotate(pos)
-        Ball.update(ball1, frame, wheel)
-        Ball.update(ball2, frame, wheel)
-        Ball.update(ball3, frame, wheel)
-        // Ball.update(ball4, frame)
-        // Ball.update(ball5, frame)
+        group.rotate(pos)
+        Ball.update(ball1, frame, group)
+        Ball.update(ball2, frame, group)
+        Ball.update(ball3, frame, group)
+        Ball.update(ball4, frame, group)
+        Ball.update(ball5, frame, group)
         // Ball.update(ball6, frame)
         // Ball.update(ball7, frame)
         // Ball.update(ball8, frame)

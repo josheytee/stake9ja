@@ -28,8 +28,8 @@
       width: 250px;
     }
     .stake-buttons {
-      width: 255px;
-      margin-left: 3px
+      width: 240px;
+      margin-left: 4px;
     }
   }
 </style>

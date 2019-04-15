@@ -1,21 +1,21 @@
 <template>
   <div>
     <div class="container">
-        <div class="row">
-          <div class="col  left">
-            <img src="/static/images/logo.png" class="mx-auto d-block" alt="">
-          </div>
-          <div class="col my-auto right">
-            <div id="h2">WELCOME TO</div>
-            <div id="h1">STAKE9<span style="color: white">J</span>A</div>
-            <div class="row m-2">
-              <a href="#/login" class="btn btn-home col mr-2">LOGIN</a>
-              <a href="#/register" class="btn btn-home col">CREATE ACCOUNT</a>
-            </div>
-            <a href="#" class="btn btn-home-full btn-home-transparent">FORGET PASSWORD</a>
-          </div>
+      <div class="row">
+        <div class="col  left">
+          <img src="/static/images/logo.png" class="mx-auto d-block" alt="">
         </div>
-      <slider/>
+        <div class="col my-auto right">
+          <div id="h2">WELCOME TO</div>
+          <div id="h1">STAKE9<span style="color: white">J</span>A</div>
+          <div class="row m-2">
+            <a href="#/login" class="btn btn-home col mr-2">LOGIN</a>
+            <a href="#/register" class="btn btn-home col">CREATE ACCOUNT</a>
+          </div>
+          <a href="#" class="btn btn-home-full btn-home-transparent">FORGET PASSWORD</a>
+        </div>
+      </div>
+      <card/>
     </div>
     <div class="quick-information">
       <h3>
@@ -36,17 +36,18 @@
 </template>
 
 <script>
-  import Slider from './Slider'
+  import Card from '../Others/Card'
+  // import Slider from './Slider'
 
   export default {
     name: 'Home',
     components: {
-      Slider
+      Card
     }
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   /*@import '~/slick-carousel/slick/slick.css'*/
   .Home {
     padding: 50px;
@@ -101,5 +102,36 @@
       font-size: 2.5em;
     }
 
+  }
+
+  @media  (min-width: 480px) {
+    .left {
+      padding-top: 20px;
+      margin: 0 auto;
+      img {
+        /*background-position: center;*/
+        /*min-width: 35%;*/
+        max-width: 70%;
+        width: 100%;
+      }
+    }
+
+    .right {
+      text-align: center;
+      color: white;
+      padding: 40px 5px;
+      line-height: .8;
+      #h1 {
+        color: $color-primary;
+        font-weight: bold;
+        font-size: 3em;
+        padding: 20px 2px;
+      }
+      #h2 {
+        color: white;
+        font-size: 1.5em;
+      }
+
+    }
   }
 </style>

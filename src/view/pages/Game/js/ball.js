@@ -4,10 +4,10 @@ let height = 500
 let width = 500
 let gravity = 10
 
-// let friction = 0.89
+let friction = 0.89
 
 function handleCurveCollision(ball, curve) {
-  console.log(curve)
+  // console.log(curve)
   var curveLayer = curve.getLayer()
   var x = ball.x()
   var y = ball.y()
@@ -41,7 +41,25 @@ function handleCurveCollision(ball, curve) {
   }
 }
 
-function update(ball, frame, wheel) {
+function update(ball, frame, group) {
+  // group.angularVelocity = ((group.rotation() - group.lastRotation) * 1000) / frame.timeDiff
+  // group.rotate((frame.timeDiff * group.angularVelocity) / 1000)
+  // group.lastRotation = group.rotation()
+
+  if (ball.y() + ball.radius > height) {
+    ball.dy = -ball.dy * friction
+  } else {
+    ball.dy += gravity
+  }
+  if (ball.x() + ball.radius > width || ball.x() - ball.radius <= 0) {
+    ball.dx = -ball.dx
+  }
+  ball.x(ball.x() + ball.dx)
+  ball.y(ball.y() + ball.dy)
+// ball.draw()
+}
+
+function update1(ball, frame, wheel) {
   let timeDiff = frame.timeDiff
   let stage = ball.getStage()
   let height = stage.height()
@@ -256,4 +274,4 @@ function getNormal(curve, ball) {
   return normalize(normal)
 }
 
-export default {draw, init, update}
+export default {draw, add, init, update}
