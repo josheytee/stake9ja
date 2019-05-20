@@ -14,7 +14,7 @@ a{
 
 .App {
   background-size: cover;
-  background: url(/static/images/wallpaper.png) no-repeat fixed;
+  background: url(/static/images/wallpaper.png) repeat fixed;
   background-color: $color-1;
 }
 

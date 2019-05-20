@@ -17,11 +17,11 @@
 }
 
 .btn-home {
-  $padding: 12px;
+  $padding: 10px;
   color: white;
-  background-color: $color-2;
-  font-size: 16px;
+  font-size: 10px;
   padding: $padding;
+  background-color: $color-2;
   &:hover {
     background-color: $color-light;
     color: $color-2;
@@ -33,6 +33,7 @@
     border: $color-2 1px solid;
     padding: $padding;
     color: $color-2;
+    font-size: 10px;
     &:hover {
       color: $color-light;
       border: $color-light 1px solid;

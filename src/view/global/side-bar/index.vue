@@ -47,8 +47,12 @@
 <script>
   export default {
     name: 'SideBar',
+    data() {
+      return {
+        showing: false
+      }
+    },
     methods: {
-      showing: false,
       openNav: function () {
         this.showing = true
         document.getElementById('main').style.marginLeft = '250px'

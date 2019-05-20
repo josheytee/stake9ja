@@ -1,13 +1,13 @@
 <template>
   <div>
     <div class="container">
-      <div class="row">
-        <div class="col  left">
-          <img src="/static/images/logo.png" class="mx-auto d-block" alt="">
+      <div class="row my-5">
+        <div class="col-md-6 left">
+          <img src="/static/images/logo.png" style="width: 80%" class="mx-auto d-block" alt="">
         </div>
-        <div class="col my-auto right">
-          <div id="h2">WELCOME TO</div>
-          <div id="h1">STAKE9<span style="color: white">J</span>A</div>
+        <div class="col-md-6 mt-5 mx-auto right">
+          <h2>WELCOME TO</h2>
+          <h1>STAKE9<span style="color: white">J</span>A</h1>
           <div class="row m-2">
             <a href="#/login" class="btn btn-home col mr-2">LOGIN</a>
             <a href="#/register" class="btn btn-home col">CREATE ACCOUNT</a>
@@ -75,63 +75,56 @@
     }
   }
 
-  .left {
-    padding-top: 20px;
-    margin: 0 auto;
-    img {
-      /*background-position: center;*/
-      /*min-width: 35%;*/
-      max-width: 70%;
-      width: 100%;
-    }
-  }
-
   .right {
     text-align: center;
-    color: white;
-    padding: 40px 5px;
-    line-height: .8;
-    #h1 {
-      color: $color-primary;
-      font-weight: bold;
+    h1 {
+      color: #00a859;
       font-size: 5em;
-      padding: 20px 2px;
+      line-height: 1;
     }
-    #h2 {
-      color: white;
-      font-size: 2.5em;
+    h2 {
+      color: wheat;
+      font-size: 3em;
+      line-height: 0.4;
     }
-
   }
 
-  @media  (min-width: 480px) {
-    .left {
-      padding-top: 20px;
-      margin: 0 auto;
-      img {
-        /*background-position: center;*/
-        /*min-width: 35%;*/
-        max-width: 70%;
-        width: 100%;
+  @media screen and(min-width: 250px) and (max-width: 320px) {
+    .left{
+      img{
+        width: 70%;
+        margin: 0 auto;
       }
     }
-
     .right {
       text-align: center;
-      color: white;
-      padding: 40px 5px;
-      line-height: .8;
-      #h1 {
-        color: $color-primary;
-        font-weight: bold;
-        font-size: 3em;
-        padding: 20px 2px;
+      margin-top: 50px;
+      h1 {
+        color: #00a859;
+        font-size: 3.2em;
+        line-height: 1;
       }
-      #h2 {
-        color: white;
-        font-size: 1.5em;
+      h2 {
+        color: wheat;
+        font-size: 2.2em;
+        line-height: 0.4;
       }
+    }
+  }
 
+  @media screen and(min-width: 321px) and (max-width: 786px) {
+    .right {
+      margin-top: 50px;
+      h1 {
+        color: #00a859;
+        font-size: 4em;
+        line-height: 1;
+      }
+      h2 {
+        color: wheat;
+        font-size: 2em;
+        line-height: 0.4;
+      }
     }
   }
 </style>

@@ -4,7 +4,7 @@
     <div class="card-carousel">
       <div class="card-carousel--overflow-container">
         <div class="card-carousel-cards" :style="{ transform: 'translateX' + '(' + currentOffset + 'px' + ')'}">
-          <slider-card ref="slider_item" v-for="i in items" :image="i.image" :amount="i.amount"/>
+          <slider-card ref="slider_item" v-for="i in items" :key="i.amount" :image="i.image" :amount="i.amount"/>
         </div>
       </div>
     </div>

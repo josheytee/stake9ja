@@ -5,6 +5,6 @@ export default {
   name: 'Card',
   component: Card,
   meta: {
-    main_menu: true
+    main_menu: false
   }
 }

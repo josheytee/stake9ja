@@ -20,9 +20,7 @@
               </div>
               <div class="form-group">
                 <div class="col-12">
-                  <label for="checkbox">
-                    <input type="checkbox" id="checkbox" v-model="check" class="form-control"/>
-                  </label>
+                  <Checkbox name="remember"/>
                 </div>
               </div>
               <div class="form-group">
@@ -40,9 +38,11 @@
 
 <script>
   import {mapGetters} from 'vuex'
+  import Checkbox from './Checkbox'
 
   export default {
     name: 'Login',
+    components: {Checkbox},
     data() {
       return {
         form: {

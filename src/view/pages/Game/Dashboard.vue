@@ -2,8 +2,8 @@
   <v-stage ref="stage" :config="stageSize">
     <v-layer ref="layer">
       <v-image ref="wheel" :config="wheelConfig()"/>
-      <!--<v-regular-polygon ref="wheel" :config="wheel" @mousedown="mousedown"></v-regular-polygon>-->
-      <v-group ref="group" :config="wheelConfig()">
+      <!--<v-regular-polygon ref="wheel" :config="polygonConfig()"/>-->
+      <v-group ref="group" :config="groupConfig()" v-on:mousemove="mousemove_touchmove()">
         <!--<v-image :config="ballConfig(b)"  v-for="b in balls" v-bind:key="b"/>-->
         <v-image :config="ballConfig(1)" ref="b1"/>
         <v-image :config="ballConfig(2)" ref="b2"/>
@@ -14,6 +14,7 @@
         <v-image :config="ballConfig(7)" ref="b7"/>
         <v-image :config="ballConfig(8)" ref="b8"/>
         <v-image :config="ballConfig(9)" ref="b9"/>
+        
         <v-image :config="ballConfig(10)" ref="b10"/>
         <v-image :config="ballConfig(11)" ref="b11"/>
         <v-image :config="ballConfig(12)" ref="b12"/>
@@ -30,28 +31,20 @@
   import Ball from './js/ball'
   import Konva from 'konva'
 
-  const stageWidth = 600
-  const StageHeight = 600
-
   export default {
     name: 'Dashboard',
     data() {
       return {
         stageSize: {
-          width: stageWidth,
-          height: StageHeight
+          width: Ball.width,
+          height: Ball.height
         },
-        gravity: 1,
-        friction: 0.99,
-        width: 600,
-        height: 600,
-        wheel: null
+        wheel: null,
+        group: null
       }
     },
     methods: {
       wheelConfig: function () {
-        let wheelWidth = 500
-        let wheelHeight = 500
         let wheelImage = new Image()
         wheelImage.src = '/static/asset/fancy/wheel.png'
         // wheelImage.onload = () => {
@@ -59,26 +52,78 @@
         // this.image = image
         // }
         return {
-          width: wheelWidth,
-          height: wheelHeight,
+          width: Ball.width,
+          height: Ball.height,
           image: wheelImage,
-          x: stageWidth / 2,
-          y: StageHeight / 2,
+          x: Ball.width / 2,
+          y: Ball.height / 2,
           offset: {
-            x: wheelWidth / 2,
-            y: wheelHeight / 2
+            x: Ball.width / 2,
+            y: Ball.height / 2
           }
+        }
+      },
+      groupConfig: function () {
+        return {
+          controlled: false,
+          width: Ball.width,
+          height: Ball.height,
+          x: Ball.width / 2,
+          y: Ball.height / 2,
+          clipFunc: function (ctx) {
+            ctx.arc(Ball.width / 2, Ball.height / 2, 300, 0, Math.PI * 2, false);
+            // ctx.arc(150, 120, 60, 0, Math.PI * 2, false);
+          },
+          offset: {
+            x: Ball.width / 2,
+            y: Ball.height / 2
+          }
+        }
+      },
+      polygonConfig: function () {
+        let wheelImage = new Image()
+        wheelImage.src = '/static/asset/fancy/wheel.png'
+        // wheelImage.onload = () => {
+        // set image only when it is loaded
+        // this.image = image
+        // }
+        let poly = Ball.width / 2
+        return {
+          image: wheelImage,
+          radius: 300,
+          sides: 8,
+          // fill: 'black',
+          stroke: 'red',
+          x: poly,
+          y: poly
+          // offset: {
+          //   x: poly,
+          //   y: poly
+          // }
         }
       },
       ballConfig: function (id) {
         return Ball.draw(id)
+      },
+      mousemove_touchmove: function () {
+        if (this.group.controlled) {
+          let stage = this.refs.stage.getStage()
+          var mousePos = stage.getPointerPosition();
+          var x = this.group.x() - mousePos.x;
+          var y = this.group.y() - mousePos.y;
+          this.group.rotation(0.5 * Math.PI + Math.atan(y / x));
+
+          if (mousePos.x <= stage.width() / 2) {
+            this.group.rotate(Math.PI);
+          }
+        }
       }
-    },
+    }
+    ,
     mounted: function () {
       // let that = this
-      let wheel = this.$refs.wheel.getStage()
-      console.log(wheel.width(), wheel.height())
-      let group = this.$refs.group.getStage()
+      let wheel = this.wheel = this.$refs.wheel.getStage()
+      let group = this.group = this.$refs.group.getStage()
       let ball1 = this.$refs.b1.getStage()
       let ball2 = this.$refs.b2.getStage()
       let ball3 = this.$refs.b3.getStage()
@@ -96,7 +141,6 @@
       let ball15 = this.$refs.b15.getStage()
       // initialization
       Ball.init(ball1)
-      console.log(ball1.radius)
       Ball.init(ball2)
       Ball.init(ball3)
       Ball.init(ball4)
@@ -111,17 +155,29 @@
       Ball.init(ball13)
       Ball.init(ball14)
       Ball.init(ball15)
-      // console.log(ball1)
 
+      // console.log(ball1)
+      Konva.angleDeg = false
+      wheel.angluarVelocity = group.angularVelocity = 100
+
+      // let toDeg = Math.PI / 180
+      // group.rotation(30 * toDeg)
       const anim = new Konva.Animation(function (frame) {
-        let pos = 0.1
-        wheel.rotate(pos)
-        group.rotate(pos)
-        Ball.update(ball1, frame, group)
-        Ball.update(ball2, frame, group)
-        Ball.update(ball3, frame, group)
-        Ball.update(ball4, frame, group)
-        Ball.update(ball5, frame, group)
+        let pos = 0.01
+        // wheel.rotate(pos)
+
+        // Ball.animate(wheel, frame)
+        // Ball.animate(group, frame)
+        // group.rotate(pos)
+
+        Ball.preUpdate(ball1, group, frame)
+        Ball.update(ball1, group)
+        // Ball.preUpdate(ball1, wheel, frame)
+        // Ball.update(ball1, wheel)
+        // Ball.update(ball2, frame, group)
+        // Ball.update(ball3, frame, group)
+        // Ball.update(ball4, frame, group)
+        // Ball.update(ball5, frame, group)
         // Ball.update(ball6, frame)
         // Ball.update(ball7, frame)
         // Ball.update(ball8, frame)
@@ -132,7 +188,7 @@
         // Ball.update(ball13, frame)
         // Ball.update(ball14, frame)
         // Ball.update(ball15, frame)
-        // ball1.setX(Math.sin((frame.time * 2 * Math.PI)))
+        // ball1.x(Math.sin((frame.time * 2 * Math.PI)))
         // console.log(ball1)
       }, wheel.getLayer())
       anim.start()

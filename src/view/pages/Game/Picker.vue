@@ -12,7 +12,8 @@
             <img :src="'static/asset/'+ball+'.png'" :alt="ball">
           </div>
         </div>
-
+      </div>
+      <div class="row">
         <div class="col-6 btn btn-primary">
           <label for="stake">
             stake
@@ -52,8 +53,6 @@
     },
     methods: {
       pickBall: function (number) {
-        // console.log(number)
-        // if (this.picked_balls.filter() < 8) {
         let clickedBall = document.getElementById('ball_' + number)
         let pickedBall = this.picked_balls.find(ball => ball === number)
         if (pickedBall != null) {
@@ -68,7 +67,6 @@
             clickedBall.classList.add('picked-' + number)
           }
         }
-        // }
         console.log(this.picked_balls)
       }
     },
@@ -96,7 +94,6 @@
     background-color: $color-primary;
     border-radius: 5px;
     max-width: $picker-width;
-    margin-top: 10px;
     margin: 10px auto;
     height: 80px;
     img {

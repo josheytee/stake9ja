@@ -1,57 +1,57 @@
 <template>
   <!--<b-col>-->
 
-    <div class="footer container-fluid">
-      <div class="footer-top">
-        <a href="#/responsible-gaming">Responsible Gaming</a>
-        <a href="#/contact">Contact Us</a>
-        <a href="#/help">Help</a>
-        <a href="#/privacy">Privacy Policy</a>
-        <a href="#/terms">T&Cs</a>
-      </div>
-      <div class="payments">
-        <img src="/static/asset/padlock.png" alt="secure">
-        <img src="/static/asset/visa.png" alt="visa">
-        <img src="/static/asset/verve.png" alt="verve">
-        <img src="/static/asset/mastercard.png" alt="master card">
-        <img src="/static/asset/interswitch.jpg" alt="interswitch">
-      </div>
-      <div class="footer-bottom row">
-        <div class="footer-social col mt-lg-4">
-          <a href="#">
-            <img src="/static/asset/Facebook.png" alt="facebook">
-            <span>@stake9ja</span>
-          </a>
-          <a href="#">
-            <img src="/static/asset/Twitter.png" alt="twitter">
-            <span>@stake9ja</span>
-          </a>
-          <a href="#">
-            <img src="/static/asset/Instgram.png" alt="Instagram">
-            <span>@stake9ja</span>
-          </a>
-          <a href="#">
-            <img src="/static/asset/Whatsapp.png" alt="Instagram">
-            <span>+234</span>
-          </a>
+  <div class="footer container-fluid">
+    <div class="footer-top">
+      <a href="#/responsible-gaming">Responsible Gaming</a>
+      <!--<a href="#/contact">Contact Us</a>-->
+      <a href="#/help">Help</a>
+      <a href="#/privacy">Privacy Policy</a>
+      <a href="#/terms">T&Cs</a>
+    </div>
+    <div class="payments">
+      <img src="/static/asset/padlock.png" alt="secure">
+      <img src="/static/asset/visa.png" alt="visa">
+      <img src="/static/asset/verve.png" alt="verve">
+      <img src="/static/asset/mastercard.png" alt="master card">
+      <img src="/static/asset/interswitch.jpg" alt="interswitch">
+    </div>
+    <div class="footer-bottom row">
+      <div class="footer-social col-md-4 col-sm-12">
+        <a href="#">
+          <img src="/static/asset/Facebook.png" alt="facebook">
+          <span>@stake9ja</span>
+        </a>
+        <a href="#">
+          <img src="/static/asset/Twitter.png" alt="twitter">
+          <span>@stake9ja</span>
+        </a>
+        <a href="#">
+          <img src="/static/asset/Instgram.png" alt="Instagram">
+          <span>@stake9ja</span>
+        </a>
+        <a href="#">
+          <img src="/static/asset/Whatsapp.png" alt="Instagram">
+          <span>+234</span>
+        </a>
 
-        </div>
-        <div class="footer-powered col mt-lg-5">
-          Powered by Truth ware Solutions
-        </div>
-
-        <div class="footer-others col">
-          <div id="wrap">
-            <div id="eig" class="mt-lg-4 mr-4">
-              <img src="/static/asset/+18.png" alt="18+">
-            </div>
-            <div id="logo">
-              <img src="/static/images/logo.png" alt="logo">
-            </div>
+      </div>
+      <div class="footer-powered col-md-4 col-sm-6 my-sm-4">
+        <br>
+        Powered by Truth ware Solutions
+        <br>
+        <br>
+      </div>
+      <div class="footer-others col-md-4 col-sm-6">
+        <div class="row">
+          <div class="col-12">
+            <img src="/static/asset/+18.png" id="img18" alt="18+">
+            <img src="/static/images/logo.png" id="imgl" alt="logo">
           </div>
         </div>
       </div>
     </div>
+  </div>
   <!--</b-col>-->
 </template>
 
@@ -127,26 +127,25 @@
         display: block;
         font-size: 10px;
       }
+      background-color: #47061c;
     }
     &-powered {
+      background-color: #47061c;
       text-align: center;
     }
     &-others {
-      /*position: relative;*/
-      #wrap {
-        display: flex;
-        float: right;
-        img {
-          width: 100%;
-        }
-        #eig {
-          width: 60px;
-        }
-        #logo {
-          width: 150px;
-        }
-
+      background-color: #47061c;
+      #img18 {
+        width: 4em;
+      }
+      #imgl {
+        width: 11em;
       }
     }
   }
+
+  @media screen and (min-width: 250px) and (max-width: 786px) {
+
+  }
+
 </style>
