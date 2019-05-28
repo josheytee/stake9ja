@@ -6,34 +6,6 @@ let width = 600
 let rad = 300
 let area = 2 * Math.PI * rad
 
-function angleTo(ball, b) {
-  return Math.atan2(b.y - ball.y, b.x - ball.x)
-}
-
-function getSpeed(ball) {
-  return Math.sqrt(ball.x() * ball.x() + ball.y() * ball.y())
-}
-
-function setSpeed(ball, speed) {
-  let heading = getHeading(ball)
-  ball.x(Math.cos(heading) * speed)
-  ball.y(Math.sin(heading) * speed)
-}
-
-function getHeading(ball) {
-  return Math.atan2(ball.y(), ball.x())
-}
-
-function setHeading(ball, heading) {
-  let speed = getSpeed(ball)
-  ball.x(Math.cos(heading) * speed)
-  ball.y(Math.sin(heading) * speed)
-}
-
-function angleTo(ball, p2) {
-  return Math.atan2(p2.y - ball.y(), p2.x - ball.x());
-}
-
 function accelerate(ball, v) {
   ball.vx += v.getX()
   ball.vy += v.getY()

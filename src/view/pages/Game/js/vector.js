@@ -72,9 +72,6 @@ let vector = {
   divideBy: function (v2) {
     this._x /= v2
     this._y /= v2
-  },
-  angleTo: function (v2) {
-    this.setAngle(Math.atan2(v2.y - this.getY(), v2.x - this.getX()))
   }
 }
 export default {vector}
