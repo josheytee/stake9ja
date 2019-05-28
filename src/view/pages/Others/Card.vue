@@ -23,8 +23,8 @@
     data: function () {
       return {
         currentOffset: 0,
-        windowSize: 3,
-        paginationFactor: 220,
+        windowSize: 1,
+        paginationFactor: 250,
         items: [
           {image: '18000', amount: '200'},
           {image: '45000', amount: '500'},

@@ -1,6 +1,6 @@
 <template lang="pug">
   .App
-    AppNavigation
+    //AppNavigation
     //SideBar
     main.AppContent#main
       router-view

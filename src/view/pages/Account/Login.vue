@@ -25,7 +25,7 @@
               </div>
               <div class="form-group">
                 <div class="col-12">
-                  <input value="Login" type="submit" class="btn btn-full btn-dark"/>
+                  <input value="Login" type="submit" class="btn btn-home btn-full "/>
                 </div>
               </div>
             </div>

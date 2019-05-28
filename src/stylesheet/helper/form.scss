@@ -9,7 +9,7 @@
     padding: 30px;
     font-size: 16px;
     &[type='submit'] {
-      background-color: $color-2;
+      //background-color: $color-2;
       padding: 20px;
       width: 100%;
     }
@@ -22,9 +22,11 @@
   font-size: 10px;
   padding: $padding;
   background-color: $color-2;
+  border: 2px solid $color-2;
   &:hover {
-    background-color: $color-light;
     color: $color-2;
+    border: 2px solid $color-2;
+    background-color: $color-light;
   }
   &-full {
     width: 100%;
@@ -43,6 +45,15 @@
 }
 
 .btn {
+  &-login {
+    $padding: 10px;
+    color: white;
+    font-size: 10px;
+    padding: $padding;
+    background-color: $color-2;
+    border: 2px solid $color-2;
+
+  }
 
   &-stake {
     background-color: $color-3;

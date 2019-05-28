@@ -42,7 +42,7 @@
             </div>
             <div class="form-group">
               <div class="col-12">
-                <input value="Register" type="submit" class="btn btn-full btn-dark"/>
+                <input value="Register" type="submit" class="btn btn-full btn-home"/>
               </div>
             </div>
           </form>

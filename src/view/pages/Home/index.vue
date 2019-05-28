@@ -18,18 +18,21 @@
       <card/>
     </div>
     <div class="quick-information">
-      <h3>
-        Stake 9ja is a standard licenced lottery company, which is the first of its kind with guaranteed hourly
-        win</h3>
-      <p>Stake9ja is here to provide a standard online gaming platform for Bingo lovers, Stake9ja can be played with
-        just N200 Minimum.</p>
-      <p>Stake a bet by playing N200 and picking 8 random numbers between 0-36, Games start every 6 hours (12am, 6am,
-        12pm, 6pm)</p>
-      <p>Once the entries of each player is locked in; and game starts.</p>
-      <p>The platform will run draw entries, each draw number carries 3 points,</p>
-      <p>The first player with 24 points wins the game and is instantly created with the allocated winnings for the
-        game.</p>
-      <img src="/static/asset/fancy/balls.png" alt="">
+      <div class="container">
+
+        <h3>
+          Stake 9ja is a standard licenced lottery company, which is the first of its kind with guaranteed hourly
+          win</h3>
+        <p>Stake9ja is here to provide a standard online gaming platform for Bingo lovers, Stake9ja can be played with
+          just N200 Minimum.</p>
+        <p>Stake a bet by playing N200 and picking 8 random numbers between 0-36, Games start every 6 hours (12am, 6am,
+          12pm, 6pm)</p>
+        <p>Once the entries of each player is locked in; and game starts.</p>
+        <p>The platform will run draw entries, each draw number carries 3 points,</p>
+        <p>The first player with 24 points wins the game and is instantly created with the allocated winnings for the
+          game.</p>
+        <img src="/static/asset/fancy/balls.png" alt="">
+      </div>
     </div>
   </div>
 
@@ -90,8 +93,8 @@
   }
 
   @media screen and(min-width: 250px) and (max-width: 320px) {
-    .left{
-      img{
+    .left {
+      img {
         width: 70%;
         margin: 0 auto;
       }
